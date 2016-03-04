@@ -5,11 +5,29 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.Assert;
 
 public class FacebookTesting {
 
-   
+	String Actualtext;
+    WebDriver driver = new FirefoxDriver();
 
+	
+	public void load_url()
+	
+	{ 
+        WebDriver driver = new FirefoxDriver();
+		driver.navigate().to("http://facebook.com"); 
+	}
+	
+	public void checking_method() 
+    { 
+    	Actualtext = driver.findElement(By.xpath("//h2/span")).getText(); 
+    	Assert.assertEquals(Actualtext, "Tuesday, 28 January 2014"); 
+    	System.out.print("\n assertion_method_1() -> Part executed"); 
+
+    } 
+// to be moved to @ Test
     public static void main (String[] args) {
     
 
@@ -28,7 +46,10 @@ public class FacebookTesting {
         textbox.sendKeys("YourPassword");
 
         textbox.submit();
-
+        
+        
+        
+        
         
 
         //sign out
