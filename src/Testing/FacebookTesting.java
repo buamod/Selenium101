@@ -11,7 +11,6 @@ public class FacebookTesting {
 
 	String Actualtext;
     WebDriver driver = new FirefoxDriver();
-
 	
 	public void load_url()
 	
@@ -23,7 +22,7 @@ public class FacebookTesting {
 	public void checking_method() 
     { 
     	Actualtext = driver.findElement(By.xpath("//h2/span")).getText(); 
-    	Assert.assertEquals(Actualtext, "Tuesday, 28 January 2014"); 
+    	Assert.assertEquals(Actualtext, "Tuesday, 29 January 2014"); 
     	System.out.print("\n assertion_method_1() -> Part executed"); 
 
     } 
